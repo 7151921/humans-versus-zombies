@@ -1,38 +1,226 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Encode Sans Expanded', sans-serif !important;
+}
+
+.rd3t-label__title{ fill: white !important;}
+
+table
+{
+  table-layout:fixed;
+  width:100%;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  border: transparent;
+  -webkit-text-fill-color: #e4e2de;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* The dropdown container */
+.dropdown {
+  float: left;
+  padding-top: 2px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Dropdown button */
+.dropdown .dropbtn {
+  text-transform: none;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  transition: all 0.2s ease-in-out;
+  color: #04ff82;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1b1e1f;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #2b2f31;
+  transition: all 0.2s ease-in-out;
+  color: #04ff82;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.upload {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 240px;
+  min-height: 240px;
+  max-height: 240px;
+  color: #fff;
+  /*background-color: #4aa0ea;*/
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.upload p {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+.upload.is-highlight {
+  background-color: rgba(74, 160, 234, 0.5);
+}
+.upload.is-highlight p {
+  opacity: 1;
+}
+.upload.is-drop p {
+  opacity: 0;
+}
+.upload-button {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.upload-file {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #101010;
+  border: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.split-screen {
+  width: 100%;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.split-screen .left {
+  flex: 1;
+  min-width: 75%;
+}
+
+.split-screen .half {
+  flex: 1;
+  min-width: 50%;
+}
+
+.split-screen .right {
+  flex: 1;
+}
+
+
+.node__root > circle {
+  fill: #01BF71;
+}
+
+.node__branch > circle {
+  stroke: #01BF71;
+  stroke-width: 2px;
+  fill: #010606;
+}
+
+.node__leaf > circle {
+  fill: green;
+}
+
+.link__to-leaf {
+  stroke: blue;
+}
+
+.link__to-branch {
+  stroke: red;
+}
+
+.tree-link {
+  fill: none;
+  stroke: #01BF71 !important;
+  stroke-width: 3px;
+}
+
+.no-link {
+  visibility: hidden;
+}
+
+.red-calendar-header {
+  background-color: red;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-background video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

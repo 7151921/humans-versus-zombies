@@ -1,0 +1,3 @@
+the green: 04ff82
+cards: 181A1B
+button color: #01bf71

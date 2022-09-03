@@ -1,0 +1,40 @@
+name: Deploy to Github
+
+on:
+  push:
+    branches:
+      - mainline
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Build
+        run: |
+          npm install --legacy-peer-deps
+          npm run-script build
+        env:
+          REACT_APP_USER_POOL_ID: ${{secrets.REACT_APP_USER_POOL_ID}}
+          REACT_APP_CLIENT_ID: ${{secrets.REACT_APP_CLIENT_ID}}
+          REACT_APP_BASE_URL: ${{secrets.REACT_APP_BASE_URL}}
+          REACT_APP_GAME_TITLE: ${{secrets.REACT_APP_GAME_TITLE}}
+          REACT_APP_ORGANIZATION: ${{secrets.REACT_APP_ORGANIZATION}}
+          REACT_APP_HUMAN: ${{secrets.REACT_APP_HUMAN}}
+          REACT_APP_ZOMBIE: ${{secrets.REACT_APP_ZOMBIE}}
+          REACT_APP_THRESHOLD: ${{secrets.REACT_APP_THRESHOLD}}
+          REACT_APP_GENERIC_ERROR: ${{secrets.REACT_APP_GENERIC_ERROR}}
+          REACT_APP_TAG_DIALOG: ${{secrets.REACT_APP_TAG_DIALOG}}
+          REACT_APP_TIME_ZONE: ${{secrets.REACT_APP_TIME_ZONE}}
+          REACT_APP_FACEBOOK: ${{secrets.REACT_APP_FACEBOOK}}
+          REACT_APP_INSTAGRAM: ${{secrets.REACT_APP_INSTAGRAM}}
+          REACT_APP_TWITTER: ${{secrets.REACT_APP_TWITTER}}
+          REACT_APP_YOUTUBE: ${{secrets.REACT_APP_YOUTUBE}}
+          REACT_APP_LINKEDIN: ${{secrets.REACT_APP_LINKEDIN}}
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
