@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/humans-versus-zombies/static/css/main.b9085fd3.css",
-    "main.js": "/humans-versus-zombies/static/js/main.4ddce7df.js",
+    "main.js": "/humans-versus-zombies/static/js/main.789cfa23.js",
     "static/media/video.mp4": "/humans-versus-zombies/static/media/video.5b6e18784578db493329.mp4",
+    "static/media/background.gif": "/humans-versus-zombies/static/media/background.2e1a40b04711fa7132f1.gif",
     "static/media/example_pp.png": "/humans-versus-zombies/static/media/example_pp.cdf7e5798631d2926309.png",
     "static/media/exampleImage.png": "/humans-versus-zombies/static/media/exampleImage.927a6560d4fc57c8af52.png",
     "static/media/svg-4.svg": "/humans-versus-zombies/static/media/svg-4.0a8cdc4e955009fb7a5983c82315eff6.svg",
     "index.html": "/humans-versus-zombies/index.html",
     "main.b9085fd3.css.map": "/humans-versus-zombies/static/css/main.b9085fd3.css.map",
-    "main.4ddce7df.js.map": "/humans-versus-zombies/static/js/main.4ddce7df.js.map"
+    "main.789cfa23.js.map": "/humans-versus-zombies/static/js/main.789cfa23.js.map"
   },
   "entrypoints": [
     "static/css/main.b9085fd3.css",
-    "static/js/main.4ddce7df.js"
+    "static/js/main.789cfa23.js"
   ]
 }
