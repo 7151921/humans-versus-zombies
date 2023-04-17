@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/humans-versus-zombies/static/css/main.936836a8.css",
-    "main.js": "/humans-versus-zombies/static/js/main.f2d49fa1.js",
+    "main.js": "/humans-versus-zombies/static/js/main.1f7635de.js",
     "static/media/background.gif": "/humans-versus-zombies/static/media/background.cd763fccaa800329044f.gif",
     "static/media/video.mp4": "/humans-versus-zombies/static/media/video.c03c573096920a0f1ed0.mp4",
     "static/media/example_pp.png": "/humans-versus-zombies/static/media/example_pp.cdf7e5798631d2926309.png",
@@ -9,10 +9,10 @@
     "static/media/svg-4.svg": "/humans-versus-zombies/static/media/svg-4.0a8cdc4e955009fb7a5983c82315eff6.svg",
     "index.html": "/humans-versus-zombies/index.html",
     "main.936836a8.css.map": "/humans-versus-zombies/static/css/main.936836a8.css.map",
-    "main.f2d49fa1.js.map": "/humans-versus-zombies/static/js/main.f2d49fa1.js.map"
+    "main.1f7635de.js.map": "/humans-versus-zombies/static/js/main.1f7635de.js.map"
   },
   "entrypoints": [
     "static/css/main.936836a8.css",
-    "static/js/main.f2d49fa1.js"
+    "static/js/main.1f7635de.js"
   ]
 }
